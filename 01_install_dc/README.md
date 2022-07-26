@@ -6,10 +6,8 @@
     - Change the DNS server to our own IP address
 
 2.  Install the Active Directory Windows Feature
+    - `Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
 
-```shell
-Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-```
 
 - `import-Module ADDSDeployment`
 - `Install-ADDSForest`
@@ -44,4 +42,3 @@ Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
     - `Set-DnsClientServerAddress -InterfaceIndex x -ServerAddressess 192.168.153.155`
 3. Joing the xyz.com domain
     - `Add-Computer -DomainName xyz.com -Credential xyz\Administrator -Restart -Force`
-    
